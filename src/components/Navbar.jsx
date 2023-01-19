@@ -82,7 +82,7 @@ cursor:pointer;
 
 const Navbar = () => {
   //! sets id 
-  let counterIdNav = 20;
+  let counterIdNav = 5;
   counterIdNav++
 
   return (

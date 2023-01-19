@@ -16,7 +16,7 @@ function Categories() {
   return (
     <Container>
         {categoriesitems && categoriesitems.map(item => (
-          <CategoryItem img={item.img} title={item.title} button={item.button} />
+          <CategoryItem img={item.img} title={item.title} button={item.button} key={item.id} />
         ))}
       </Container>
   )

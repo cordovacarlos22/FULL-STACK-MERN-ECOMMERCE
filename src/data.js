@@ -26,18 +26,18 @@ export const sliderItems =
 
 export const categoriesitems = [
   {
-    id: 0,
-    img: "https://i.postimg.cc/GmZCBNtB/744lx0b71j2bs2vjja25739mju8n.png",
+    id: 1,
+    img: "https://i.postimg.cc/MGzxBWXr/744lx0b71j2bs2vjja25739mju8n.png",
     title: "SHIRT STYLE!",
   },
   {
-    id: 0,
-    img: "/Users/carloscordova/Desktop/ecommerce-v1/ecommerce-1/ecommerce-1/src/img/1664172041aa344c2296240deb132875478abe0a46_thumbnail_900x.webp",
+    id: 2,
+    img: "https://i.postimg.cc/Qxsrw8JN/16708974082243dc9971d54a3fa8b108f4d444ee2f-thumbnail-900x.webp",
     title: "LOUNGEWEAR LOVE",
   },
   {
-    id: 0,
-    img: "/Users/carloscordova/Desktop/ecommerce-v1/ecommerce-1/ecommerce-1/src/img/16708974082243dc9971d54a3fa8b108f4d444ee2f_thumbnail_900x.webp",
+    id: 3,
+    img: "https://i.postimg.cc/zXnGH20v/167030592677d7b8ff9ca442d613c092c59b74bcad-thumbnail-900x.webp",
     title: "LIGHT JACKETS",
   },
 ];
@@ -49,34 +49,31 @@ export const popularProducts = [
   },
   {
     id: 0,
-    img: "/Users/carloscordova/Desktop/ecommerce-v1/ecommerce-1/ecommerce-1/src/img/UCS319_1YOT_F010O_S_182_SLF.png",
+    img: "https://i.postimg.cc/vBCqXFR9/NAVY-front-removebg-preview.png",
   },
   {
     id: 0,
-    img: "/Users/carloscordova/Desktop/ecommerce-v1/ecommerce-1/ecommerce-1/src/img/166815332704be271f99e5ae59586369c333ffa128_thumbnail_900x-removebg-preview.png",
+    img: "https://i.postimg.cc/fW0gyLXv/Noissue.png",
   },
   {
     id: 0,
-    img: "/Users/carloscordova/Desktop/ecommerce-v1/ecommerce-1/ecommerce-1/src/img/CA1004_CHARCOAL_front-removebg-preview.png",
+    img: "https://i.postimg.cc/gkVSyTgX/UCS319-1-YOT-F010-O-S-182-SLF.png",
   },
-  {
-    id: 0,
-    img: "/Users/carloscordova/Desktop/ecommerce-v1/ecommerce-1/ecommerce-1/src/img/Noissue.png",
-  },
+
   {
     id: 0,
     img: "https://d3o2e4jr3mxnm3.cloudfront.net/Rocket-Vintage-Chill-Cap_66374_1_lg.png",
   },
   {
     id: 0,
-    img: "/Users/carloscordova/Desktop/ecommerce-v1/ecommerce-1/ecommerce-1/src/img/NAVY_front-removebg-preview.png",
+    img: "https://i.postimg.cc/sfMW6YgB/CA1004-CHARCOAL-front-removebg-preview.png",
   },
   {
     id: 0,
-    img: "/Users/carloscordova/Desktop/ecommerce-v1/ecommerce-1/ecommerce-1/src/img/8863_BLACK_front-removebg-preview.png",
+    img: "https://i.postimg.cc/Lsv4RbNH/166815332704be271f99e5ae59586369c333ffa128-thumbnail-900x-removebg-preview.png",
   },
   {
     id:0,
-    img:"/Users/carloscordova/Desktop/ecommerce-v1/ecommerce-1/ecommerce-1/src/img/Women-jacket.png"
+    img:"https://i.postimg.cc/wT84mpQY/Women-jacket.png"
   }
 ]

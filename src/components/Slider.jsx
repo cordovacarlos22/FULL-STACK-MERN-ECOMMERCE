@@ -101,20 +101,20 @@ function Slider() {
     }
   };
   return (
-    <SliderMainContainer id={counterId++}>
+    <SliderMainContainer key={counterId++}>
       <Arrow id={counterId++} direction="left" onClick={() => handleClick("left")}>
         <ArrowLeft />
       </Arrow>
-      <SliderWrapper id={counterId++}  slideIndex={slideIndex}>
+      <SliderWrapper key={counterId++}  slideIndex={slideIndex}>
         {sliderItems && sliderItems.map((item) => (
-          <SlideContainer id={counterId++} bg={item.bg}>
+          <SlideContainer key={counterId++} bg={item.bg}>
             <SliderImgContainer id={counterId++}>
-              <SliderImg id={counterId++} src={(`${item.img}`)}></SliderImg>
+              <SliderImg key={counterId++} src={(`${item.img}`)}></SliderImg>
             </SliderImgContainer >
-            <SliderInfoContainer id={counterId++}>
-              <SliderTitle id={counterId++}>{item.title}</SliderTitle>
-              <SliderParagraph id={counterId++}>{item.desc}</SliderParagraph>
-              <SliderButton id={counterId++}>Shop Now</SliderButton>
+            <SliderInfoContainer key={counterId++}>
+              <SliderTitle key={counterId++}>{item.title}</SliderTitle>
+              <SliderParagraph key={counterId++}>{item.desc}</SliderParagraph>
+              <SliderButton key={counterId++}>Shop Now</SliderButton>
             </SliderInfoContainer>
           </SlideContainer>
         ))};

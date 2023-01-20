@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 //! category item container
 const Container = styled.div`
-  flex:1; 
+  flex:1;
   margin:3px;
   height:70vh;
   position:relative;

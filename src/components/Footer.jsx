@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import FacebookIcon from '@mui/icons-material/Facebook';
-import { Instagram, Twitter } from '@mui/icons-material';
+import { Email, Instagram, Phone, Room, Twitter } from '@mui/icons-material';
+
 
 const Container = styled.div`
 display:flex;
@@ -24,7 +25,6 @@ const Logo = styled.h1`
 
 const Description = styled.p`
   margin: 20px  0px;
-
 `
 
 const SocialContainer = styled.div`
@@ -41,7 +41,7 @@ const SocialIcon = styled.div`
  display:flex;
  align-items:center;
  justify-content:center;
-
+ cursor:pointer;
 `
 
 const Center = styled.div`
@@ -50,21 +50,26 @@ const Center = styled.div`
 
 `
 
-const  Title = styled.h3 `
+const Title = styled.h3`
 margin-bottom:30px;
 
 `
-const  List = styled.ul`
+const List = styled.ul`
 margin:0;
 padding:0;
 list-style:none;
 display:flex;
 flex-wrap:wrap;
+
+
 `
 
 const ListItem = styled.li`
 width:50%;
 margin:10px 0px;
+cursor:pointer;
+
+
 `
 const Right = styled.div`
  flex:1;
@@ -74,6 +79,14 @@ const Right = styled.div`
 
 const ContactItem = styled.p`
  margin: 10px 0px;
+ display:flex;
+ align-items:center;
+ padding:5px;
+ gap:5px;
+`
+
+const Payment = styled.img`
+width:35%
 `
 
 
@@ -93,12 +106,11 @@ const Footer = () => {
           <SocialIcon color="55ACEE">
             <Twitter />
           </SocialIcon>
-
         </SocialContainer>
       </Left>
       <Center>
         <Title>
-            Useful Links
+          Useful Links
         </Title>
         <List>
           <ListItem>Home</ListItem>
@@ -109,21 +121,25 @@ const Footer = () => {
           <ListItem>My Account</ListItem>
           <ListItem>Order Tracking</ListItem>
           <ListItem>Wishlist</ListItem>
+          <ListItem>Returns</ListItem>
           <ListItem>Terms</ListItem>
         </List>
       </Center>
       <Right>
-
-        <Title>Contact</Title>
+         <Title>Contact</Title>
         <ContactItem>
+          <Room />
           00001 Resource, Los Angeles CA 00001
         </ContactItem>
         <ContactItem>
+          <Phone />
           +1 001 0003 0003
         </ContactItem>
         <ContactItem>
-          contact@avepaseosbt@dev
+          <Email />
+          contact@avepaseosbt@dev.com
         </ContactItem>
+        <Payment src="https://i.postimg.cc/jd851bQD/6220ac7d912013c51947f9c6.png" />
       </Right>
 
     </Container>

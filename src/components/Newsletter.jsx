@@ -53,7 +53,7 @@ export const Newsletter = () => {
       <Title>Newsletter</Title>
       <Description>Get timely updates from your favorite products</Description>
       <InputContainer>
-        <Input placeholder='Your email' />
+        <Input placeholder='Your email'  type="email"/> 
         <Button>
           <SendIcon></SendIcon>
         </Button>

@@ -5,17 +5,19 @@ import Slider from '../components/Slider'
 import Categories from '../components/Categories';
 import Products from '../components/Products';
 import { Newsletter } from '../components/Newsletter';
+import Footer from '../components/Footer';
 //! home container
 
 const Home = () => {
   return (
     <div>
-      <Annoncement/>
-      <Navbar/>
-      <Slider/>
-      <Categories/>
-      <Products/>
-      <Newsletter/>
+      <Annoncement />
+      <Navbar />
+      <Slider />
+      <Categories />
+      <Products />
+      <Newsletter />
+      <Footer />
     </div>
   )
 }

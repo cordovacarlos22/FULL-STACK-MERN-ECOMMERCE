@@ -33,6 +33,7 @@ const InputContainer = styled.div`
 const Input = styled.input`
  border:none;
  flex:8;
+ padding-left:20px;
 `
 
 const Button = styled.button`
@@ -49,14 +50,14 @@ const Button = styled.button`
 export const Newsletter = () => {
   return (
     <Container>
-        <Title>Newsletter</Title>
-        <Description>Get timely updates from your favorite products</Description>
-        <InputContainer>
-          <Input placeholder='Your email'/>
-         <Button>
+      <Title>Newsletter</Title>
+      <Description>Get timely updates from your favorite products</Description>
+      <InputContainer>
+        <Input placeholder='Your email' />
+        <Button>
           <SendIcon></SendIcon>
-         </Button>
-        </InputContainer>
+        </Button>
+      </InputContainer>
 
     </Container>
   )

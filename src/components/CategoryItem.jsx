@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 //! category item container
-const  Container = styled.div`
+const Container = styled.div`
   flex:1; 
   margin:3px;
   height:70vh;
@@ -52,13 +52,13 @@ const Button = styled.button`
 const CategoryItem = (item) => {
   return (
     <Container>
-     <Image src={item.img}/>
-     <Info>
-      <Title>{item.title}</Title>
-      <Button>Shop Now</Button>
-     </Info>
+      <Image src={item.img} />
+      <Info>
+        <Title>{item.title}</Title>
+        <Button>Shop Now</Button>
+      </Info>
     </Container>
   )
-}; 
+};
 
 export default CategoryItem

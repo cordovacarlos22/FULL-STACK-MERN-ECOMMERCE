@@ -1,4 +1,4 @@
-import {FavoriteBorderOutlined, SearchOutlined, ShoppingCartOutlined } from '@mui/icons-material'
+import { FavoriteBorderOutlined, SearchOutlined, ShoppingCartOutlined } from '@mui/icons-material'
 import React from 'react'
 import styled from 'styled-components'
 
@@ -59,8 +59,8 @@ z-index:2;
 
 
 const Icon = styled.div`
- width:49px;
- height:40px;
+ width:50px;
+ height:50px;
  border-radius:50%;
  display:flex;
  align-items:center;
@@ -75,14 +75,14 @@ const Icon = styled.div`
     transform: scale(1.1);
   }
 `
-const Product = ({item}) => {
+const Product = ({ item }) => {
   return (
     <Container>
-      <Circle/>
-      <Img src={item.img}/>
+      <Circle />
+      <Img src={item.img} />
       <Info>
         <Icon>
-          <ShoppingCartOutlined/>
+          <ShoppingCartOutlined />
         </Icon>
         <Icon>
           <SearchOutlined />

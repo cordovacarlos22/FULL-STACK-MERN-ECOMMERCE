@@ -6,6 +6,7 @@ import { Email, Instagram, Phone, Room, Twitter } from '@mui/icons-material';
 
 const Container = styled.div`
 display:flex;
+flex-wrap:wrap;
 
 
 `

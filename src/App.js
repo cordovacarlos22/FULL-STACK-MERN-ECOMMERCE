@@ -1,4 +1,5 @@
 import './App.css';
+import Register from './pages/Register';
 // import Home from './pages/Home';
 // import Product from './pages/Product';
 // import ProductList from './pages/ProductList';
@@ -9,7 +10,7 @@ function App() {
       {/* <Home/> */}
       {/* <ProductList/> */}
       {/* <Product/> */}
-      
+      <Register/>
     </div>
   );
 }

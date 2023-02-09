@@ -1,7 +1,7 @@
 import React from 'react'
 import Annoncement from '../components/Annoncement'
 import Navbar from '../components/Navbar';
-import Slider from '../components/Slider'
+import Slider from '../components/Slider.jsx'
 import Categories from '../components/Categories';
 import Products from '../components/Products';
 import { Newsletter } from '../components/Newsletter';

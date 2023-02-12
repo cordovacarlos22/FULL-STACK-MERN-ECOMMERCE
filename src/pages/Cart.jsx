@@ -33,9 +33,9 @@ const TopButton = styled.button`
  padding:10px;
  font-weight:600;
  cursor:pointer;
- border: ${props=> props.type === "filled" && "none" };
- background-color: ${props => props.type === "filled" ? "black" : "transparent" };
- color:${props => props.type === "filled" && "white" };
+ border: ${props => props.type === "filled" && "none"};
+ background-color: ${props => props.type === "filled" ? "black" : "transparent"};
+ color:${props => props.type === "filled" && "white"};
  border-radius:10px;
 `;
 
@@ -99,7 +99,7 @@ const ProductColor = styled.div`
  width:20px;
  height:20px;
  border-radius:50%;
- background:${props=>props.color};
+ background:${props => props.color};
 
 `;
 
@@ -132,7 +132,7 @@ const ProductPrice = styled.div`
 `;
 
 
-const Hr = styled.hr `
+const Hr = styled.hr`
  background-color :#eee;
  border:none;
  height:1px;
@@ -146,53 +146,71 @@ const Summary = styled.div`
  border : 0.5px solid lightgray;
  border-radius:10px;
  padding:20px;
+ height:50vh;
 
 `;
 
-const SummaryTitle = styled.h1``;
+const SummaryTitle = styled.h1`
+ font-weight:300;
 
-const SummaryItem = styled.h1``;
-const SummaryItemText = styled.h6``;
-const SummaryItemPrce = styled.h6``;
-const SummaryButton = styled.button``;
+`;
+
+const SummaryItem = styled.div`
+ margin: 30px 0px;
+ display:flex;
+ justify-content:space-between;
+ font-weight:${props => props.type === "total" && "500"};
+ font-size: ${props => props.type === "type" && "24px"};
+`;
+const SummaryItemText = styled.span``;
+const SummaryItemPrce = styled.span``;
+const SummaryButton = styled.button`
+ width:100%;
+ padding:10px;
+ background-color:black;
+ color:white;
+ font-weight:600px;
+ cursor:pointer;
+
+`;
 
 const Cart = () => {
   return (
     <Container>
-      <NavBar/>
-      <Announcement/>
+      <NavBar />
+      <Announcement />
       <Wrapper>
         <Title>Your Bag</Title>
-          <Top>
-            <TopButton>Continue Shopping</TopButton>
-             <TopTexts>
-              <TopText>Shopping Bag(2)</TopText>
-              <TopText>Your WishList(0)</TopText>
-             </TopTexts>
-            <TopButton type='filled'>Check Out Now</TopButton>
-          </Top>
-          <Bottom>
-              <Info>Info
-                <Product>
-                  <ProductDetail>
-                <Image src="https://interactive.wired.com/www-wired-com__2016__09__nike-self-lacing-design-hyperadapt/ff_nike-vapormax_front_angle-1.jpg.7"/>
-                  <Details>
+        <Top>
+          <TopButton>Continue Shopping</TopButton>
+          <TopTexts>
+            <TopText>Shopping Bag(2)</TopText>
+            <TopText>Your WishList(0)</TopText>
+          </TopTexts>
+          <TopButton type='filled'>Check Out Now</TopButton>
+        </Top>
+        <Bottom>
+          <Info>Info
+            <Product>
+              <ProductDetail>
+                <Image src="https://interactive.wired.com/www-wired-com__2016__09__nike-self-lacing-design-hyperadapt/ff_nike-vapormax_front_angle-1.jpg.7" />
+                <Details>
                   <ProductName><b>Product:</b>Jessie Thunder Shoes</ProductName>
                   <ProductId><b>Id:</b>12345</ProductId>
-                  <ProductColor color="black"/>
+                  <ProductColor color="black" />
                   <ProductSize><b>Size:</b>9.5</ProductSize>
-                  </Details>
-                  </ProductDetail>
-                  <PriceDetail>
-                    <ProductAmountContainer>
-                      <Add/>
-                      <ProductAmount>2</ProductAmount>
-                      <Remove/>
-                    </ProductAmountContainer>
-                    <ProductPrice>$ 30</ProductPrice>
-                  </PriceDetail>
-                </Product>
-                <Hr/>
+                </Details>
+              </ProductDetail>
+              <PriceDetail>
+                <ProductAmountContainer>
+                  <Add />
+                  <ProductAmount>2</ProductAmount>
+                  <Remove />
+                </ProductAmountContainer>
+                <ProductPrice>$ 30</ProductPrice>
+              </PriceDetail>
+            </Product>
+            <Hr />
             <Product>
               <ProductDetail>
                 <Image src="https://img.ltwebstatic.com/images2_pi/2019/04/11/15549720522369514997_thumbnail_900x1199.webp" />
@@ -212,25 +230,31 @@ const Cart = () => {
                 <ProductPrice>$ 20</ProductPrice>
               </PriceDetail>
             </Product>
-              </Info>
-              <Summary>
-                <SummaryTitle>Order Summary</SummaryTitle>
-                <SummaryItem>
-                  <SummaryItemText>Subtotal</SummaryItemText>
-                  <SummaryItemPrce>$ 80</SummaryItemPrce>
-              <SummaryItemText>Estimated Shipping</SummaryItemText>
-              <SummaryItemPrce>$ 10</SummaryItemPrce>
-              <SummaryItemText>Shipping Discount</SummaryItemText>
-              <SummaryItemPrce>$ -10</SummaryItemPrce>
-              <SummaryItemText type="total">Order Total</SummaryItemText>
+          </Info>
+          <Summary>
+            <SummaryTitle>Order Summary</SummaryTitle>
+            <SummaryItem>
+              <SummaryItemText>Subtotal</SummaryItemText>
               <SummaryItemPrce>$ 80</SummaryItemPrce>
-                </SummaryItem>
-                <SummaryButton>Check Out Now</SummaryButton>
-              </Summary>
-          </Bottom>
+            </SummaryItem>
+            <SummaryItem>
+              <SummaryItemText>Estimated Shipping Cost</SummaryItemText>
+              <SummaryItemPrce>$ 5</SummaryItemPrce>
+            </SummaryItem>
+            <SummaryItem>
+              <SummaryItemText>Shipping Discount</SummaryItemText>
+              <SummaryItemPrce>$ -5</SummaryItemPrce>
+            </SummaryItem>
+            <SummaryItem type="total">
+              <SummaryItemText>Total</SummaryItemText>
+              <SummaryItemPrce>$ 80</SummaryItemPrce>
+            </SummaryItem>
+            <SummaryButton>Check Out Now</SummaryButton>
+          </Summary>
+        </Bottom>
       </Wrapper>
-      <Footer/>
-      
+      <Footer />
+
     </Container>
   )
 }

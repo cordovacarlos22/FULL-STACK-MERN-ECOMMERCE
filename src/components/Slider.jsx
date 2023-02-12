@@ -1,7 +1,7 @@
 import { ArrowLeft, ArrowRight } from '@mui/icons-material';
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { sliderItems } from '/Users/carloscordova/Desktop/ecommerce-v1/ecommerce-1/ecommerce-1/src/data.js';
+import { sliderItems } from '../data';
 // ! main container for slider component
 const SliderMainContainer = styled.div`
   width:100%;
@@ -85,7 +85,7 @@ const SliderButton = styled.button`
 `
 
 //! slider main function 
-function Slider() {
+const Slider = () => {
   //! sets id 
   let counterId = 0;
   counterId++
@@ -105,7 +105,7 @@ function Slider() {
       <Arrow id={counterId++} direction="left" onClick={() => handleClick("left")}>
         <ArrowLeft />
       </Arrow>
-      <SliderWrapper key={counterId++}  slideIndex={slideIndex}>
+      <SliderWrapper key={counterId++} slideIndex={slideIndex}>
         {sliderItems && sliderItems.map((item) => (
           <SlideContainer key={counterId++} bg={item.bg}>
             <SliderImgContainer id={counterId++}>
@@ -126,4 +126,4 @@ function Slider() {
   )
 }
 
-export default Slider;
+export default Slider

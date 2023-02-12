@@ -2,10 +2,11 @@ import Badge from '@mui/material/Badge';
 import React from 'react';
 import styled from 'styled-components';
 import { SearchOutlined, ShoppingCartOutlined } from '@mui/icons-material';
-
-//! nav main container
+import {mobile} from '../responsive'
+ //! nav main container
 const NavContainer = styled.div
-  `
+`
+ 
 `;
 //! nav bar wrapper container
 const NavWrapper = styled.div

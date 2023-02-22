@@ -1,118 +1,102 @@
-import Badge from '@mui/material/Badge';
-import React from 'react';
-import styled from 'styled-components';
-import { SearchOutlined, ShoppingCartOutlined } from '@mui/icons-material';
-import {mobile} from '../responsive'
- //! nav main container
-const NavContainer = styled.div
-`
- 
+import { Badge } from "@material-ui/core";
+import { Search, ShoppingCartOutlined } from "@material-ui/icons";
+import React from "react";
+import styled from "styled-components";
+import { mobile } from "../responsive";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+
+const Container = styled.div`
+  height: 60px;
+  ${mobile({ height: "50px" })}
 `;
-//! nav bar wrapper container
-const NavWrapper = styled.div
-  `
-  display:flex;
-  justify-content:space-between;
-  padding 10px 30px;
-  align-items:center;
+
+const Wrapper = styled.div`
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  ${mobile({ padding: "10px 0px" })}
 `;
-//! nav bar left components
-const NavLeft = styled.div
-  `
-display:flex;
-align-items:center;
-flex:1; //! sets even part for nav-left, nav-center && nav-right
+
+const Left = styled.div`
+  flex: 1;
+  display: flex;
+  align-items: center;
 `;
-//! UI LANGUAGE
-const Lang = styled.span`
-  font-size:14;
-  cursor:pointer;
+
+const Language = styled.span`
+  font-size: 14px;
+  cursor: pointer;
+  ${mobile({ display: "none" })}
 `;
-//! div container for search 
+
 const SearchContainer = styled.div`
   border: 0.5px solid lightgray;
-  margin-left:20px;
-  padding:0 10px;
-  display:flex;
-  align-items:center;
-  border-radius:20px;
-`
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+  padding: 5px;
+`;
 
-//! div container for input 
 const Input = styled.input`
-  border:none;
-  margin:10px;
-  padding:3px;
- `
+  border: none;
+  ${mobile({ width: "50px" })}
+`;
 
-//! nav bar center components
-const NavCenter = styled.div
-  `
-flex:1; //! sets even part for nav-left, nav-center && nav-right
-text-align:center;
+const Center = styled.div`
+  flex: 1;
+  text-align: center;
 `;
 
 const Logo = styled.h1`
-font-weight:bold;
-
-  
-`
-
-
-//! nav bar right components 
-const NavRight = styled.div
-  `
-  display:flex;
-  justify-content:flex-end;
-  gap:15px;
-  flex:1; //! sets even part for nav-left, nav-center && nav-right
+  font-weight: bold;
+  ${mobile({ fontSize: "24px" })}
 `;
-//! menu item  register,sign in & cart icon 
+const Right = styled.div`
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  ${mobile({ flex: 2, justifyContent: "center" })}
+`;
+
 const MenuItem = styled.div`
-font-size:14px;
-cursor:pointer;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 25px;
+  ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 `;
-
-// const ExpressShipping = styled.div`
-//  color:#CD0404;
-//  font-weight:bold;
-//  font-size:12px;
-// `
-
-
 
 const Navbar = () => {
-  //! sets id 
-  let counterIdNav = 5;
-  counterIdNav++
-
+  const quantity = useSelector(state=>state.cart.quantity)
   return (
-    <NavContainer id ={counterIdNav++}>
-      <NavWrapper id={counterIdNav++}> 
-        <NavLeft id={counterIdNav++}>
-          <Lang>EN</Lang>
+    <Container>
+      <Wrapper>
+        <Left>
+          <Language>EN</Language>
           <SearchContainer>
-            <Input placeholder='search'></Input>
-            <SearchOutlined></SearchOutlined>
+            <Input placeholder="Search" />
+            <Search style={{ color: "gray", fontSize: 16 }} />
           </SearchContainer>
-        </NavLeft>
-        <NavCenter id={counterIdNav++}>
-          <Logo> AVE PASEOS BOUTIQUE</Logo>
-        </NavCenter>
-        <NavRight id={counterIdNav++}>
-          {/* <ExpressShipping><span>FREE EXPRESS SHIPPING</span> ON ORDER  OF +129</ExpressShipping> */}
-          <MenuItem id={counterIdNav++}>Register</MenuItem>
-          <MenuItem id={counterIdNav++}>Sign in</MenuItem>
-          <MenuItem id={counterIdNav++}>
-            <Badge id={counterIdNav++} badgeContent={4} color="primary">
-              <ShoppingCartOutlined></ShoppingCartOutlined>
+        </Left>
+        <Center>
+          <Logo>LAMA.</Logo>
+        </Center>
+        <Right>
+          <MenuItem>REGISTER</MenuItem>
+          <MenuItem>SIGN IN</MenuItem>
+          <Link to="/cart">
+          <MenuItem>
+            <Badge badgeContent={quantity} color="primary">
+              <ShoppingCartOutlined />
             </Badge>
           </MenuItem>
-        </NavRight>
-      </NavWrapper>
-      <hr></hr>
-    </NavContainer>
-  )
-}
+          </Link>
+        </Right>
+      </Wrapper>
+    </Container>
+  );
+};
 
 export default Navbar;

@@ -1,64 +1,20 @@
-import { Send } from "@material-ui/icons";
-import styled from "styled-components";
-import { mobile } from "../responsive";
-
-const Container = styled.div`
-  height: 60vh;
-  background-color: #fcf5f5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-`;
-const Title = styled.h1`
-  font-size: 70px;
-  margin-bottom: 20px;
-`;
-
-const Desc = styled.div`
-  font-size: 24px;
-  font-weight: 300;
-  margin-bottom: 20px;
-  ${mobile({ textAlign: "center" })}
-
-`;
-
-const InputContainer = styled.div`
-  width: 50%;
-  height: 40px;
-  background-color: white;
-  display: flex;
-  justify-content: space-between;
-  border: 1px solid lightgray;
-  ${mobile({ width: "80%" })}
-`;
-
-const Input = styled.input`
-  border: none;
-  flex: 8;
-  padding-left: 20px;
-`;
-
-const Button = styled.button`
-  flex: 1;
-  border: none;
-  background-color: teal;
-  color: white;
-`;
+import SendIcon from '@mui/icons-material/Send';
+import React from 'react'
 
 const Newsletter = () => {
   return (
-    <Container>
-      <Title>Newsletter</Title>
-      <Desc>Get timely updates from your favorite products.</Desc>
-      <InputContainer>
-        <Input placeholder="Your email" />
-        <Button>
-          <Send />
-        </Button>
-      </InputContainer>
-    </Container>
-  );
-};
+    <div className='w-screen h-full justify-center   bg-rose-100 flex  flex-col  p-2 '>
+      <h1 className='text-6xl justify-center flex  text-indigo-500 text-extrabold'>Newsletter</h1>
+      <p className='flex justify-center text-  text-xl m-2 text-bold'>Get timely Updates from your favorite Products</p>
+      <div className='flex justify-center mb-2'>
+        <input className='w-2/4 rounded-l-sm p-1  text-blue-700  text-extrabold ' placeholder='Your Email here:' type="email" ></input>
+        <div className=' bg-blue-700 cursor-pointer rounded-r-sm p-1 text-white'>
+          <button><SendIcon></SendIcon></button>
+        </div>
 
-export default Newsletter;
+      </div>
+    </div>
+  )
+}
+
+export default Newsletter

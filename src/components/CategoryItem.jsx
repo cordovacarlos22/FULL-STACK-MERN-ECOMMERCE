@@ -54,8 +54,8 @@ const CategoryItem = (item) => {
     <Container>
       <Image src={item.img} />
       <Info>
-        <Title>{item.title}</Title>
-        <Button>Shop Now</Button>
+        <h1 className='text-white text-xl font-ex bg-blue-700 p-1 m-1 rounded-sm'>{item.title}</h1>
+        <button className='bg-white rounded-md p-1 text-slate-700 '>Shop Now</button>
       </Info>
     </Container>
   )

@@ -3,7 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Info = styled.div`
- z-index:2;
+ z-index:15;
  width:100%;
  height:100%;
  position:absolute;
@@ -11,7 +11,7 @@ const Info = styled.div`
  left:0;
  background-color:rgba(0,0,0,0.2);
  opacity: 0;
- z-index:3;
+ z-index:20;
  display:flex;
  align-items:center;
  justify-content:center;
@@ -21,7 +21,7 @@ const Info = styled.div`
 
 `
 const Container = styled.div`
- flex:1
+ display:flex;
  margin:5px;
  margin-bottom:20px;
  width:380px;
@@ -29,7 +29,7 @@ const Container = styled.div`
  display:flex;
  justify-content:center;
  align-items:center;
- background-color:#f5fbfb;
+ background-color:lightgray;
  position:relative;
  border-radius:10px;
   &:hover ${Info}{
@@ -39,8 +39,8 @@ const Container = styled.div`
 `
 
 const Circle = styled.div`
-  width:300px;
-  height:300px;
+  width:270px;
+  height:270px;
   border-radius:50%;
   background-color:white;
   position:absolute;
@@ -79,7 +79,7 @@ const Product = ({ item }) => {
   return (
     <Container>
       <Circle />
-      <Img src={item.img} />
+      <img className='w-2/4 z-10' src={item.img} />
       <Info>
         <Icon>
           <ShoppingCartOutlined />

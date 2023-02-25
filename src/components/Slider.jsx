@@ -108,13 +108,13 @@ const Slider = () => {
       <SliderWrapper key={counterId++} slideIndex={slideIndex}>
         {sliderItems && sliderItems.map((item) => (
           <SlideContainer key={counterId++} bg={item.bg}>
-            <SliderImgContainer id={counterId++}>
-              <SliderImg key={counterId++} src={(`${item.img}`)}></SliderImg>
-            </SliderImgContainer >
-            <SliderInfoContainer key={counterId++}>
-              <SliderTitle key={counterId++}>{item.title}</SliderTitle>
+            <div className='d-flex   justify-center' id={counterId++}>
+              <img className='w-[100%]  flex  flex-1' key={counterId++} src={(`${item.img}`)}></img>
+            </div >
+            <SliderInfoContainer  key={counterId++}>
+              <h1 className='text-2xl font-ex' key={counterId++}>{item.title}</h1>
               <SliderParagraph key={counterId++}>{item.desc}</SliderParagraph>
-              <SliderButton key={counterId++}>Shop Now</SliderButton>
+              <button className='bg-blue-700 text-white rounded-md p-1  cursor-pointer' key={counterId++}>Shop Now</button>
             </SliderInfoContainer>
           </SlideContainer>
         ))};

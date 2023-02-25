@@ -16,7 +16,7 @@ const Payment = () => {
   useEffect(() => {
     const makeRequest = async () => {
       try {
-        const API_URL = "http://localhost:3002"
+        const API_URL = process.env.REACT_APP_API_URL_KEY
         const res = await axios.post(`${API_URL}/pay`, {
           tokenId: stripeToken.id,
           amount: 2000

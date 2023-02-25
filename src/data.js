@@ -14,7 +14,7 @@ export const sliderItems =
     title: "WINTER COLLECTION",
     desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
     bg: "fcf1ed",
-  },
+  }, 
   {
     id: 0,
     img: "https://i.postimg.cc/y62jFdLf/1-removebg-preview.png",
@@ -29,6 +29,7 @@ export const categoriesitems = [
     id: 1,
     img: "https://i.postimg.cc/MGzxBWXr/744lx0b71j2bs2vjja25739mju8n.png",
     title: "SHIRT STYLE!",
+    
   },
   {
     id: 2,

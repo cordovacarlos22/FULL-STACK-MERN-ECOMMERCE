@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Navbar from '../components/Navbar';
 import Annoncement from '../components/Annoncement'
-import { Newsletter } from '../components/Newsletter';
+import Newsletter  from '../components/Newsletter';
 import Footer from '../components/Footer';
 import { Add, Remove, ShoppingCart } from '@mui/icons-material';
 

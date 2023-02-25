@@ -1,5 +1,4 @@
 
-
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import ShoppingCart from '../components/ShoppinCart/ShoppinCart'
@@ -59,11 +58,11 @@ const NavBar = () => {
         </div>
 
         <div className={` rounded-lg md:flex  text-center align-middle w-12  m-2 cursor-pointer flex-1`} >
-          
-          <Link as={Link} to="/cart"> <ShoppingCart />  <Link/>
-           
-           
-            
+
+          <Link as={Link} to="/cart"> <ShoppingCart />  <Link />
+
+
+
             <span className='m-2 text-slate-600 underline hover:underline-offset-4  text-2xl  hover:text-indigo-500 ring-indigo-500 transiton ease-in duration-300  hover:ring-2 rign-indigo-500 rounded-sm p-1'>Cart</span>
           </Link>
         </div>
